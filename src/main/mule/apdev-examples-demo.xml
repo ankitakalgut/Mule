@@ -26,7 +26,7 @@ http://www.mulesoft.org/schema/mule/vm http://www.mulesoft.org/schema/mule/vm/cu
 	<flow name="helloflow" doc:id="1475bfe0-d2ab-45cd-aa7a-2e12b3dac3d7" >
 		<http:listener doc:name="hello " doc:id="ba362e6c-6cd8-4890-81fa-6a2686ea44ed" config-ref="HTTP_Listener_config1" path="/hello"/>
 		<flow-ref doc:name="subflow" doc:id="14222570-8777-4ba7-92cc-91da129dfc5b" name="subflow"/>
-		<vm:publish-consume doc:name="VM GoodBye" doc:id="854939fe-48f1-4c81-869e-304645483f77" config-ref="VM_Config" queueName="GoodBye" timeout="300"/>
+		<vm:publish queueName="GoodBye" doc:name="VM GoodBye" doc:id="3279c2ee-e85a-44d9-a0aa-c89c39174b34" config-ref="VM_Config"/>
 		<logger level="INFO" doc:name="Logger" doc:id="d90661b7-f6d7-4225-abcc-fb3dec1fc680" message="info"/>
 	</flow>
 	<flow name="subflow" doc:id="29fd7ec5-7bf7-4d6b-91f9-543aa9f72baf" >
